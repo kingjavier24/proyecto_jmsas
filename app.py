@@ -8,7 +8,9 @@ app = Flask(__name__)
 #@app.route("/") generea una ruta para ver la funcion inicio y su contenido
 @app.route("/")
 def inicio():
-    return render_template("index.html")
+    role="admin"
+    notes=["nota 1 ", "nota 2", "nota 3"]
+    return render_template("index.html", role=role, notes=notes)
 
 if __name__ == "__main__":
         app.run(debug=True)
